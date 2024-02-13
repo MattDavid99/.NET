@@ -63,11 +63,68 @@ namespace HelloWord
 
 
       string myString = "Hello World";
-      Console.WriteLine(myString);
+      // Console.WriteLine(myString);
       string myStringWithSymbols = "!@#$@^$%%^&(&%^*__)+%^@##$!@%123589071340698ughedfaoig137";
-      Console.WriteLine(myStringWithSymbols);
+      // Console.WriteLine(myStringWithSymbols);
 
       bool myBool = true;
+
+
+      // Arrays
+      string[] myGroceryArray = ["Grapes", "Ice Cream"];
+
+      Console.WriteLine(myGroceryArray[0]);
+      Console.WriteLine(myGroceryArray[1]);
+
+      string[] newArray = { "Apples", "Oranges" };
+      Console.WriteLine(newArray[0]);
+      Console.WriteLine(newArray[1]);
+
+      List<string> myList = [];
+
+      int i = 0;
+
+      while (i < 10)
+      {
+        myList.Add("Hello");
+        i++;
+      }
+
+      foreach (string item in myList)
+      {
+        Console.WriteLine(item);
+      }
+
+      // IEnumerable
+      IEnumerable<string> thisNumerable = myGroceryArray;
+
+      Console.WriteLine(thisNumerable.First());
+
+      string[,] my2DArray = new string[,] {
+        {"Grapes", "Ice Cream"},
+        {"Cheese", "Milk"},
+      };
+
+      Console.WriteLine(my2DArray[0, 0]); // Grapes
+
+
+      // Objects
+      Dictionary<string, string> myObject = new Dictionary<string, string>(){
+        {"Key", "Value"}
+      };
+      Console.WriteLine(myObject["Key"]); // "Value"
+
+      Dictionary<string, string[]> myObjectWithArraysAsValues = new Dictionary<string, string[]>(){
+        {"Key", ["Value1", "Value2", "Value3"]}
+      };
+      Console.WriteLine(myObjectWithArraysAsValues["Key"]); // System.String[]
+
+      foreach (string val in myObjectWithArraysAsValues["Key"])
+      {
+        Console.WriteLine(val); // Value1 Value2 Value3
+      }
+
+
     }
   }
 }
