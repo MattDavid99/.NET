@@ -12,7 +12,7 @@ namespace HelloWord
 
       if (myInt < mySecondInt)
       {
-        Console.WriteLine("Nice!");
+        Console.WriteLine(true);
       }
       else
       {
